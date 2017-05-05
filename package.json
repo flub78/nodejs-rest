@@ -1,0 +1,21 @@
+{
+  "name": "todoListApi",
+  "version": "0.0.0",
+  "description": "Experiment with a small REST API with nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "nodemon": "~1.11.0"
+  },
+  "dependencies": {
+    "express": "~4.15.2",
+    "mongoose": "~4.9.7",
+    "body-parser": "~1.17.1",
+    "promise": "~7.1.1"
+  }
+}
