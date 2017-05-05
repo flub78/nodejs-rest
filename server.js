@@ -12,13 +12,11 @@ mongoose.connect('mongodb://localhost/Tododb');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// The module todoListRoutes returns a function
-var routes = require('./api/routes/todoListRoutes');
-// which is called there to add the routes for the todoList REST
-routes(app);
-routes = require('./api/routes/usersRoutes');
-routes(app);
+// Add the routes to the application
+require('./api/routes/todoListRoutes')(app);
+require('./api/routes/usersRoutes')(app);
 
+// default for unknown routes
 app.use(function(req, res) {
 	  res.status(404).send({url: req.originalUrl + ' not found (not supported by the REST API)'})
 	});

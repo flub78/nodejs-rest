@@ -1,14 +1,14 @@
 'use strict';
 module.exports = function(app) {
-  var userCtrlr = require('../controllers/usersController');
+  var ctrlr = require('../controllers/usersController');
 
-  // userCtrlr Routes
+  // ctrlr Routes
   app.route('/users')
-    .get(userCtrlr.list_all_users)
-    .post(userCtrlr.create_a_user);
+    .get(ctrlr.list_all)
+    .post(ctrlr.create);
 
   app.route('/users/:userId')
-    .get(userCtrlr.read_a_user)
-    .put(userCtrlr.update_a_user)
-    .delete(userCtrlr.delete_a_user);
+    .get(ctrlr.read)
+    .put(ctrlr.update)
+    .delete(ctrlr.delete);
 };
