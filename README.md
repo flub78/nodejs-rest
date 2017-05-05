@@ -24,9 +24,10 @@ The server can be accessed at:
 ```
 ~/tmp $ curl http://localhost:3000/tasks
 [{"name":"Go to the market","_id":"590b6152321e4733ff471aff","__v":0,"status":["pending"],"Created_date":"2017-05-04T17:13:54.929Z"}]
-```, eventuall
+```
 
 Todo:
+
 * Include authentication
 * Organize API with several CRUDs, eventually look for templating or automatic generation
 * Search and filtering
