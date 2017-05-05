@@ -11,10 +11,4 @@ module.exports = function(app) {
     .get(todoList.read_a_task)
     .put(todoList.update_a_task)
     .delete(todoList.delete_a_task);
-
-app.use(function(req, res) {
-  res.status(404).send({url: req.originalUrl + ' not found (not supported by the API)'})
-});
-
-
 };
